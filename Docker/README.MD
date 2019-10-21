@@ -43,8 +43,8 @@ docker login registry.example.com
 docker pull registry.example.com/test-image
 ```
 
-https://docs.docker.com/registry/deploying/
-https://docs.docker.com/engine/security/certificates/
+https://docs.docker.com/registry/deploying/ </br>
+https://docs.docker.com/engine/security/certificates/ </br>
 
 ## Remove, list
 
@@ -57,4 +57,5 @@ docker rmi -f training/webapp
 ```
 
 Reference:</br>
-https://stackoverflow.com/questions/33907835/docker-error-cannot-delete-docker-container-conflict-unable-to-remove-reposito
+https://stackoverflow.com/questions/33907835/docker-error-cannot-delete-docker-container-conflict-unable-to-remove-reposito </br>
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes </br>
