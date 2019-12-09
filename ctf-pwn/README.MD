@@ -1,13 +1,4 @@
 
-## Setup :
-### 1. socat/nc
-```socat TCP-LISTEN:1234,reuseaddr,fork EXEC:./vuln
-nc 1234
-
-nc -l 9999 --exec ./vuln
-nc 9999
-``` 
-https://stackoverflow.com/questions/46941045/netcat-for-execute-remote-elf-file-like-ctfs
 
 
 ## Find pid, then pwn-tool attach
@@ -35,6 +26,12 @@ x/20x $rsp
 
 ```
 
+## ROP
+
+https://blog.techorganic.com/2016/03/18/64-bit-linux-stack-smashing-tutorial-part-3/
+https://ropemporium.com/guide.html
+https://www.ret2rop.com/2018/08/format-string-defeating-stack-canary-nx-aslr-remote.html
+[ROP and pwn tool corefile debug](https://medium.com/@iseethieves/intro-to-rop-rop-emporium-split-9b2ec6d4db08)
 
 
 ## static analysis
@@ -42,6 +39,21 @@ x/20x $rsp
 use ghidra , IDA pro free disassembl
 
 ```
+
+## Setup :
+### 1. socat/nc
+```
+socat TCP-LISTEN:1234,reuseaddr,fork EXEC:./vuln
+nc 1234
+
+nc -l 9999 --exec ./vuln
+nc 9999
+
+socat tcp-l:1235,fork exec:./vuln
+nc 1235
+``` 
+https://stackoverflow.com/questions/46941045/netcat-for-execute-remote-elf-file-like-ctfs
+
 
 ### objdump
 Check plt GOT
