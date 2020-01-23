@@ -21,8 +21,10 @@ Entry point: 0x555555555180 , file type elf64-x86-64.
 
 
 gdb-peda$ b *0x555555555180
-``` </br>
+```
+</br>
 entry at 0x555555555180 = 00101180 from ghidra
+
 ```
                              undefined __stdcall entry(undefined8 param_1, undefined8
              undefined         AL:1           <RETURN>
