@@ -1,7 +1,7 @@
 
 
 
-## Find pid, then pwn-tool attach
+### Find pid, then pwn-tool attach
 ```
 gdb> info inferior
 gdb> python print(gdb.selected_inferior().pid)
@@ -26,15 +26,15 @@ x/20x $rsp
 
 ```
 
-## ROP
+### ROP
 
-https://blog.techorganic.com/2016/03/18/64-bit-linux-stack-smashing-tutorial-part-3/
-https://ropemporium.com/guide.html
-https://www.ret2rop.com/2018/08/format-string-defeating-stack-canary-nx-aslr-remote.html
-[ROP and pwn tool corefile debug](https://medium.com/@iseethieves/intro-to-rop-rop-emporium-split-9b2ec6d4db08)
+[https://blog.techorganic.com/2016/03/18/64-bit-linux-stack-smashing-tutorial-part-3/](https://blog.techorganic.com/2016/03/18/64-bit-linux-stack-smashing-tutorial-part-3/) </br>
+[https://ropemporium.com/guide.html](https://ropemporium.com/guide.html) </br>
+[https://www.ret2rop.com/2018/08/format-string-defeating-stack-canary-nx-aslr-remote.html](https://www.ret2rop.com/2018/08/format-string-defeating-stack-canary-nx-aslr-remote.html) </br>
+[ROP and pwn tool corefile debug](https://medium.com/@iseethieves/intro-to-rop-rop-emporium-split-9b2ec6d4db08) </br>
 
 
-## static analysis
+### static analysis
 ```
 use ghidra , IDA pro free disassembl
 
@@ -59,7 +59,7 @@ https://stackoverflow.com/questions/46941045/netcat-for-execute-remote-elf-file-
 Check plt GOT
 ```objdump -d -s -j .plt -j .got.plt```
 
-## Tools
+### Tools
 ```
 gef
 # via the install script
@@ -75,3 +75,6 @@ git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 echo "DONE! debug your program with gdb and enjoy"
 ```
+
+### Canary
+![alt text](canary.jpg "Canary") </br>

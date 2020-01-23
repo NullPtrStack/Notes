@@ -13,12 +13,12 @@
 ### Delegation
 --------
 Cosntrained s4u:</br>
-https://www.harmj0y.net/blog/activedirectory/s4u2pwnage/
+https://www.harmj0y.net/blog/activedirectory/s4u2pwnage/ </br>
 
-REsource Based:</br>
+Resource Based:</br>
 https://blog.stealthbits.com/resource-based-constrained-delegation-abuse/
 
 Unconstrained, printer bug:</br>
-https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
-https://www.riccardoancarani.it/exploiting-unconstrained-delegation/
-https://shenaniganslabs.io/2019/01/28/Wagging-the-Dog.html
+https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1 </br>
+https://www.riccardoancarani.it/exploiting-unconstrained-delegation/ </br>
+https://shenaniganslabs.io/2019/01/28/Wagging-the-Dog.html </br>
