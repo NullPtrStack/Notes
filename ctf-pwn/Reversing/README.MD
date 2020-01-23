@@ -49,7 +49,8 @@ Want to break at 001014ec from ghidra :
 </br>
 
 set breakpoint = 0x0000555555555180  + 0x001014ec - 0x00101180 = 0x00005555555554EC </br>
-`b *0x55555555555D` </br>
+After `gdb-peda$ starti `  </br>
+`gdb-peda$  b *0x55555555555D` </br>
 !!note!! might have to kill old process if gdb-peda or nc (if binary is a server) did not exit correctly, then restart.
 
 `killall nc ; killall binary `
