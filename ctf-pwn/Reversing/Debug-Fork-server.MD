@@ -95,7 +95,7 @@ gef➤  x/20gx $rsi
 0x7fffffffe100:	0x0000000000000000	0x0000053900000010
 
 ```
-![$rsi](stack1.jpg)
+![rsi](stack1.jpg "rsi")
 
 so payload = 
 
