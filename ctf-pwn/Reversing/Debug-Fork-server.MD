@@ -35,6 +35,23 @@ vuln1: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linke
 
 ```
 
+ghidra: break at 001015cc right after recv() or 001015e1 after stack canary check
+```
+001015c7 e8 64 fa        CALL       recv                                             ssize_t recv(int __fd, void * __
+         ff ff
+001015cc 90              NOP
+001015cd 48 8b 55 f8     MOV        RDX,qword ptr [RBP + local_10]
+001015d1 64 48 33        XOR        RDX,qword ptr FS:[0x28]
+         14 25 28 
+         00 00 00
+001015da 74 05           JZ         LAB_001015e1
+001015dc e8 8f fa        CALL       __stack_chk_fail                                 undefined __stack_chk_fail()
+         ff ff
+                     -- Flow Override: CALL_RETURN (CALL_TERMINATOR)
+                     LAB_001015e1                                    XREF[1]:     001015da(j)  
+001015e1 c9              LEAVE
+001015e2 c3              RET
+```
 starti, then check canary
 Need to set detach-on-fork, and follow-fork-mode in order to debug child process
 
