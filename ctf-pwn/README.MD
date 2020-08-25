@@ -79,8 +79,8 @@ echo "DONE! debug your program with gdb and enjoy"
 To pass parameters to the subroutine, push them onto the stack before the call. The parameters
 should be pushed in inverted order (i.e. last parameter first)
 
-https://en.wikibooks.org/wiki/X86_Disassembly/Calling_Conventions
-https://aaronbloomfield.github.io/pdr/book/x86-32bit-ccc-chapter.pdf
+https://en.wikibooks.org/wiki/X86_Disassembly/Calling_Conventions </br>
+https://aaronbloomfield.github.io/pdr/book/x86-32bit-ccc-chapter.pdf </br>
 
 ### x86 AMD64 function call
 function ( rdi, rsi, rdx, rcx, r8, r9 )
@@ -90,8 +90,8 @@ the stack in reverse order (i.e. last parameter first) – since the stack grows
 extra parameters (really the seventh parameter) parameter will be stored at the lowest address (this
 inversion of parameters was historically used to allow functions to be passed a variable number of
 parameters).
-https://stackoverflow.com/questions/18024672/what-registers-are-preserved-through-a-linux-x86-64-function-call
-https://aaronbloomfield.github.io/pdr/book/x86-64bit-ccc-chapter.pdf
+https://stackoverflow.com/questions/18024672/what-registers-are-preserved-through-a-linux-x86-64-function-call </br>
+https://aaronbloomfield.github.io/pdr/book/x86-64bit-ccc-chapter.pdf </br>
 
 ### Canary
 ![alt text](canary.jpg "Canary") </br>
