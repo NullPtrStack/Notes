@@ -75,6 +75,23 @@ git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 echo "DONE! debug your program with gdb and enjoy"
 ```
+### x86 32bit function call
+To pass parameters to the subroutine, push them onto the stack before the call. The parameters
+should be pushed in inverted order (i.e. last parameter first)
+
+https://en.wikibooks.org/wiki/X86_Disassembly/Calling_Conventions
+https://aaronbloomfield.github.io/pdr/book/x86-32bit-ccc-chapter.pdf
+
+### x86 AMD64 function call
+function ( rdi, rsi, rdx, rcx, r8, r9 )
+To pass parameters to the subroutine, we put up to six of them into registers (in order: rdi, rsi,
+rdx, rcx, r8, r9). If there are more than six parameters to the subroutine, then push the rest onto
+the stack in reverse order (i.e. last parameter first) – since the stack grows down, the first of the
+extra parameters (really the seventh parameter) parameter will be stored at the lowest address (this
+inversion of parameters was historically used to allow functions to be passed a variable number of
+parameters).
+https://stackoverflow.com/questions/18024672/what-registers-are-preserved-through-a-linux-x86-64-function-call
+https://aaronbloomfield.github.io/pdr/book/x86-64bit-ccc-chapter.pdf
 
 ### Canary
 ![alt text](canary.jpg "Canary") </br>
