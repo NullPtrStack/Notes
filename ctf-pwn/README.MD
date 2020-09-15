@@ -1,6 +1,6 @@
 
 ### Format string bug
-````
+```
 printf '%1$hhx %1$hx %1$x %1$lx'
 
 b'3 fa03 f7fafa03 7ffff7fafa03\n'
