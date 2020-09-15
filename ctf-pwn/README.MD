@@ -4,7 +4,7 @@
 printf '%1$hhx %1$hx %1$x %1$lx'
 
 b'3 fa03 f7fafa03 7ffff7fafa03\n'
-``` </br>
+``` 
 need to setup stack/buffer then write to 64bit address (0x007ffff7fffa030) due to the 0x00 in most significant bits = multi stage payload `fgets(buff, 0x100, stdin)`</br>
 hijack execution via overwriting plt.got, or </br>
 hijack __free_hook, __malloc_hook from printf, then printf(%100000c)
